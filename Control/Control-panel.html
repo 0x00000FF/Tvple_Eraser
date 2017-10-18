@@ -1,0 +1,100 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Tvple Eraser 필터 제어판</title>
+    <style>
+        
+      label
+      {
+        display: block;
+        margin: 15px 0px;
+      }
+
+      #VideoNameFilter
+      {
+        height: 70px;
+        width: 100%;
+      }
+
+      #ChannelFilter
+      {
+        height: 70px;
+        width: 100%;
+      }
+        
+      #ExceptionFilter
+      {
+        height: 70px;
+        width: 100%;
+      }
+        
+      #ver
+        {
+            display: block;
+        }
+
+      #SaveButton
+      {
+        display: block;
+        background: #000000;
+        color: #ffffff;
+        line-height: 40px;
+        width: 100%;
+        text-align: center;
+        margin: 10px 0px;
+        cursor: pointer;
+        text-decoration: none;
+      }
+
+      #SaveButton:hover
+      {
+        background: #323232;
+      }
+
+      #SaveButton:active
+      {
+        background: #101010;
+      }
+      
+      #Donate
+      {
+        display: block;
+        margin-top: 4px;
+        text-align: right;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <p>Tvple Eraser는 자동으로 필터링 해 주지 못하는 영상에 대해 사용자가 직접 필터를 작성할 수 있도록 기능을 제공합니다.</p>
+    <p>만약 보고 싶지 않은 영상이 있다면 밑에 있는 필터에 추가해보세요.</p>
+    <p>필터는 ,(콤마)로 구분되며, "티비플", "tvple"등이 포함된 영상은 자동으로 필터링 해 드리니 입력하지 않아도 됩니다.</p>
+    <div id="ControlArea">
+      <label>
+        제목 필터 :
+        <textarea id="VideoNameFilter"></textarea>
+      </label>
+      <label>
+        채널(닉네임) 필터 :
+        <textarea id="ChannelFilter"></textarea>
+      </label>
+      <p>티비플에 올린 자작영상이나 따로 차단을 회피하고 싶다면, 여기에 유튜브 동영상 ID를 입력해주세요. 마찬가지로 ,(콤마)로 구분됩니다.</p>
+      <p>동영상 ID 예시 : https://www.youtube.com/watch?v=<span style="color:red">d-fCeGrDfaC</span></p>
+      <label>
+        필터 예외 :
+        <textarea id="ExceptionFilter"></textarea>
+      </label>
+      <p>유튜브가 새로운 버전의 디자인을 적용함에 따라, 기존의 Tvple Eraser v2가 제대로 작동되지 않아 v3를 추가하였습니다. 기본값은 v3이지만, 구버전 레이아웃을 아직도 이용중이신 경우 v2를 선택하시면 됩니다.</p>
+      <label id="ver">
+          <input type="radio" name="version" id="v2" value=2 /> v2 (구버전) 
+      </label>
+      <label id="ver">
+        <input type="radio" name="version" id="v3" value=3 /> v3 (신버전)
+      </label>
+    </div>
+    <a id="SaveButton">저장</a>
+    <div id="bitcoin"></div>
+    <a id="Donate">후원하기</a>
+    <script type="text/javascript" src="Behavior.js"></script>
+  </body>
+</html>
